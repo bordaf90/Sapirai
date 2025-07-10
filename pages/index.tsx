@@ -49,7 +49,7 @@ export default function ElevIAHome() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch('https://formspree.io/f/mrbkjaly', {
+      const res = await fetch('https://formspree.io/f/xldnqbwk', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
