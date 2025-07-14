@@ -76,7 +76,7 @@ export default function ElevIAHome() {
       {/* Hero */}
       <section className="pt-40 pb-24 px-6 text-center">
         <motion.h1
-          lassName="text-7xl font-black mb-4 tracking-tight text-white drop-shadow-xl flex justify-center items-center gap-3"
+          className="text-7xl font-black mb-4 tracking-tight text-white drop-shadow-xl flex justify-center items-center gap-3"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
