@@ -81,8 +81,12 @@ export default function ElevIAHome() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <img src="/logo-sapirai.png" alt="SapirAI Logo" className="h-16 w-16 object-contain" />
-          <span>apirAI</span>
+          <img
+            src="/logo-sapirai.png"
+            alt="SapirAI Logo"
+            className="h-16 w-16 object-contain sm:h-14 sm:w-14"
+  />
+  <span className="text-white">SapirAI</span>
         </motion.h1>
         <motion.p
           className="text-2xl text-purple-300 mb-10 italic"
