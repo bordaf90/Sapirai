@@ -1,8 +1,10 @@
-'use client';
+aca 'use client';
+
 
 import { useState } from 'react';
 import { Linkedin, Twitch, Instagram, X } from 'lucide-react';
 import { motion } from 'framer-motion';
+
 
 export default function ElevIAHome() {
   const [isChatModalOpen, setIsChatModalOpen] = useState(false);
@@ -17,6 +19,7 @@ export default function ElevIAHome() {
     },
   ]);
   const [input, setInput] = useState('');
+
 
   const handleSend = async () => {
     if (!input.trim()) return;
@@ -40,6 +43,7 @@ export default function ElevIAHome() {
       setMessages((prev) => [...prev, { from: 'bot', text: 'Error reaching assistant. Try again later.' }]);
     }
   };
+
 
   const handleContactSubmit = async (e) => {
     e.preventDefault();
@@ -66,22 +70,18 @@ export default function ElevIAHome() {
     }
   };
 
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-800 text-white font-sans">
       {/* Hero */}
       <section className="pt-40 pb-24 px-6 text-center">
         <motion.h1
-          className="text-7xl font-black mb-4 tracking-tight text-white drop-shadow-xl flex justify-center items-center gap-3"
+          className="text-7xl font-black mb-4 tracking-tight text-white drop-shadow-xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <img
-            src="/logo-sapirai.png"
-            alt="SapirAI Logo"
-            className="h-16 w-16 object-contain sm:h-14 sm:w-14"
-          />
-          <span className="text-white">apirAI</span>
+          SapirAI
         </motion.h1>
         <motion.p
           className="text-2xl text-purple-300 mb-10 italic"
@@ -100,6 +100,7 @@ export default function ElevIAHome() {
         </motion.button>
       </section>
 
+
       {/* Our Services */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-12 text-center text-purple-100">Our Services</h2>
@@ -113,6 +114,7 @@ export default function ElevIAHome() {
         </div>
       </section>
 
+
       {/* Why Us */}
       <section className="py-24 px-6 bg-gray-900">
         <h2 className="text-4xl font-bold text-center mb-10 text-white">Why SapirAI?</h2>
@@ -123,6 +125,7 @@ export default function ElevIAHome() {
           <li>Built for startups and enterprises alike</li>
         </ul>
       </section>
+
 
       {/* Contact CTA */}
       <section className="py-20 px-6 text-center">
@@ -135,6 +138,7 @@ export default function ElevIAHome() {
           Contact Us
         </button>
       </section>
+
 
       {isChatModalOpen && (
         <Modal onClose={() => setIsChatModalOpen(false)} title="Live Demo: Sapira Assistant 🤖">
@@ -170,6 +174,7 @@ export default function ElevIAHome() {
           </div>
         </Modal>
       )}
+
 
       {isContactModalOpen && (
         <Modal
@@ -220,6 +225,7 @@ export default function ElevIAHome() {
         </Modal>
       )}
 
+
       <footer className="py-6 text-center text-sm border-t border-gray-700 bg-gray-900">
         <p className="text-white mb-4">© 2025 SapirAI. All rights reserved.</p>
         <div className="flex justify-center space-x-6">
@@ -241,7 +247,8 @@ export default function ElevIAHome() {
   );
 }
 
-function ServiceCard({ title, desc }: { title: string; desc: string }) {
+
+function ServiceCard({ title, desc }) {
   return (
     <div className="bg-white bg-opacity-5 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-700">
       <h3 className="text-xl font-semibold mb-3 text-purple-200">{title}</h3>
@@ -250,15 +257,8 @@ function ServiceCard({ title, desc }: { title: string; desc: string }) {
   );
 }
 
-function Modal({
-  children,
-  onClose,
-  title,
-}: {
-  children: React.ReactNode;
-  onClose: () => void;
-  title: string;
-}) {
+
+function Modal({ children, onClose, title }) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 px-4">
       <div className="bg-white text-black p-6 rounded-xl shadow-2xl max-w-md w-full relative">
