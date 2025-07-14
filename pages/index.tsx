@@ -1,4 +1,4 @@
-aca 'use client';
+'use client';
 
 
 import { useState } from 'react';
@@ -49,7 +49,7 @@ export default function ElevIAHome() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch('https://formspree.io/f/xldnqbwk', {
+      const res = await fetch('https://formspree.io/f/mrbkjaly', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -274,3 +274,6 @@ function Modal({ children, onClose, title }) {
     </div>
   );
 }
+
+
+
