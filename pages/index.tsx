@@ -76,12 +76,13 @@ export default function ElevIAHome() {
       {/* Hero */}
       <section className="pt-40 pb-24 px-6 text-center">
         <motion.h1
-          className="text-7xl font-black mb-4 tracking-tight text-white drop-shadow-xl"
+          lassName="text-7xl font-black mb-4 tracking-tight text-white drop-shadow-xl flex justify-center items-center gap-3"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          SapirAI
+          <img src="/logo-sapirai.png" alt="SapirAI Logo" className="h-16 w-16 object-contain" />
+          <span>apirAI</span>
         </motion.h1>
         <motion.p
           className="text-2xl text-purple-300 mb-10 italic"
